@@ -1,0 +1,727 @@
+@charset "UTF-8";
+/*Fonts*/
+@import url('https://fonts.googleapis.com/css?family=Abel|Cairo|Coiny|Courgette|Dancing+Script|Great+Vibes|Nanum+Brush+Script|Pacifico|Philosopher|Poiret+One|Rajdhani|Sacramento|Timmana');
+@font-face {src: url("files/Calibri Light.ttf"); font-family: "Calibri Light";}
+/*View Compatibility*/
+/* For Mobile: */
+    .cl-m {width: 100%;}
+	.cl-hm {width: 50%;}
+	.cl-nom, .cl-nom * {display: none;}
+@media all and (min-width: 601px) {
+    /* For Tablet: */
+    .cl-t-1 {width: 8.33%;}
+    .cl-t-2 {width: 16.66%;}
+    .cl-t-3 {width: 25%;}
+    .cl-t-4 {width: 33.33%;}
+    .cl-t-5 {width: 41.66%;}
+    .cl-t-6 {width: 50%;}
+    .cl-t-7 {width: 58.33%;}
+    .cl-t-8 {width: 66.66%;}
+    .cl-t-9 {width: 75%;}
+    .cl-t-10 {width: 83.33%;}
+    .cl-t-11 {width: 91.66%;}
+    .cl-t-12 {width: 100%;}
+	.mobile-only, .mobile-only * {display: none !important;}
+	.cl-nom, .cl-nom * {display: initial;}
+}
+@media all and (min-width: 769px) {
+    /* For Desktop: */
+    .cl-1 {width: 8.33%;}
+    .cl-2 {width: 16.66%;}
+    .cl-3 {width: 25%;}
+    .cl-4 {width: 33.33%;}
+    .cl-5 {width: 41.66%;}
+    .cl-6 {width: 50%;}
+    .cl-7 {width: 58.33%;}
+    .cl-8 {width: 66.66%;}
+    .cl-9 {width: 75%;}
+    .cl-10 {width: 83.33%;}
+    .cl-11 {width: 91.66%;}
+    .cl-12 {width: 100%;}
+	.mobile-only, .mobile-only * {display: none !important;}
+	.cl-nom, .cl-nom * {display: initial;}
+}
+
+/*Pre-Work*/
+body {margin: 0; padding: 0; font-size: 1vw; font-family: "Calibri Light";}
+a::selection {
+	background-color: transparent;
+}
+
+/*Constant Elements*/
+
+/*HEADER*/
+.main_header {
+	position: fixed;
+	display: flex;
+	color: #FFF;
+	font-size: 1em;
+	background-color: rgba(0, 0, 0, 0.0);
+	padding: 0 1%;
+	transition: all 500ms;
+	z-index: 1000;
+	/*box-shadow: 0px 1px 3px 2px #333;*/
+}
+
+/*Onscroll Down*/
+.main_header.moving {
+	background-color: rgba(0, 0, 0, 0.90);
+}
+
+/*.main_header:hover {}*/
+
+/*Left Part*/
+.top_logo {
+	display: block;
+	padding-left: 5%;
+	margin-top: 0.5%;
+}
+
+/*Left Part Content*/
+#topNavLogo {
+	position: relative;
+	display: table-cell;
+	width: 4em;
+	margin: 0;
+	padding: 0;
+	vertical-align: middle;
+	transition: all 500ms;
+}
+.logo_pic {
+	width: 100%;
+	margin-top: 0.3125em;
+	margin: 0;
+	padding: 0;
+	vertical-align: middle;
+}
+.site_title {
+	display: table-cell;
+	font-size: 2em;
+	font-family: "Calibri Light";
+	font-weight: 100;
+	margin: 0;
+	padding: 0 0.35em;
+	vertical-align: middle;
+	cursor: default;
+	transition: all 500ms;
+}
+.site_title::selection {background-color: transparent;}
+.site_link {text-decoration: none; color: inherit;}
+
+/*Onscroll Down*/
+.moving #topNavLogo {width: 3em;}
+.moving .site_title {font-size: 1.5em; padding-top: 0em; vertical-align: middle;}
+
+@media all and (max-width: 1024px) {
+	.main_header {font-size: 1.25em;}
+}
+/*Right Part*/
+
+/*NAVIGATION BAR*/
+.main_nav {
+	text-align: center;
+	font-size: 1em;
+	font-size: 100%;
+	margin-left: 10%;
+	margin-top: 0.0%;
+}
+/*General Style for Lists' Links*/
+.main_nav a, .main_nav li {text-decoration: none; color: #FFF; cursor: pointer; font-family: "Calibri Light";}
+.main_nav *::selection {background-color: transparent; color: inherit;} 
+
+/*Main Links' Menu*/
+.parent_nav_menu {
+	text-align: center;
+    position: relative;
+    display: inline-block;
+	width: 100%;
+	padding: 0;
+	margin: 0 0 0 0;
+	list-style: none;
+}
+
+/*Main Links*/
+.parent_nav_menu .top_nav_item, .srch_actvator {
+	display: inline-block;
+	font-size: 1.25em;
+	font-family: inherit;
+	text-transform: capitalize;
+	width: 15%;
+	padding: 0.9357em 0;
+	vertical-align: middle;
+	border-radius: 0 0 10px 10px;
+	transition: all 250ms;
+}
+.parent_nav_menu .top_nav_item:hover , .srch_actvator:hover {background-color: #16A085; transition: all 250ms;}
+
+/*Onscroll Down*/
+.moving .parent_nav_menu .top_nav_item, .moving .srch_actvator {border-radius: 0;}
+
+/*When Primary Button is Clicked*/
+.top_nav_item.active, .srch_actvator.active {
+	border-radius: 0 !important;
+	background-color: #16A085 !important;
+	transition: all 250ms;
+}
+
+/*Secondary Lists*/
+.parent_nav_menu .dropdown_list {
+	display: block;
+	visibility: hidden;
+	position: absolute;
+	width: 15%;
+	margin: 0.9em 0 0 0;
+	padding: 0;
+	list-style: none;
+	background-color: #16A085;
+    z-index: -1;
+	animation: PullIt 250ms;
+}
+@keyframes DropIt {
+	from {margin-top: -500px; opacity: 0; z-index: -1; visibility: hidden;}
+	to {opacity: 1; margin: 0.9em 0 0 0; z-index: -1; visibility: visible;}
+}
+@keyframes PullIt {
+	from {opacity: 1; margin: 0.9em 0 0 0; z-index: -1; visibility: visible;}
+	to {margin-top: -500px; opacity: 0; z-index: -1; visibility: hidden;}
+}
+
+/*Dropping The List*/
+.parent_nav_menu .active .dropdown_list {
+	visibility: visible;
+	animation: DropIt 750ms;
+	z-index: 1;
+}
+.parent_nav_menu .dropdown_list:last-child {
+	border-radius: 0 0 10px 10px;
+}
+
+/*Secondary Lists Items*/
+.dropdown_list .service_item {
+	display: block;
+	text-align: center;
+	font-size: 0.85em;
+	padding: 0.9375em 0;
+	border-top: 0.0625em solid #FFF;
+}
+.dropdown_list .service_item:hover {
+	background-color: rgba(0, 0, 0, 0.15)
+}
+.dropdown_list .service_link {
+	padding: 0;
+	margin: 0;
+}
+
+/*Search Bar*/
+.dropdown_list.search_dropdown {
+	animation: PullSearch 250ms;
+}
+.drop .dropdown_list.search_dropdown {
+	animation: DropSearch 250ms;
+}
+
+/*Search Input*/
+.search {
+	position: absolute;
+	visibility: hidden;
+	font-size: 1em;
+	font-family: "Calibri Light";
+	color: #111;
+	background-color: #FFF;
+	opacity: 0;
+	margin: 0;
+	z-index: -1;
+	height: 1.25em;
+	padding: 0.35em 0.5em;
+	border-radius: 0.25em;
+	border: none;
+	outline: none;
+	box-shadow: 0px 0.5px 3px 2px #111;
+	animation: PullSearch 250ms;
+}
+.search::selection {
+	color: #FFF;
+	background-color: #000;
+}
+
+/*Go Search Button*/
+#searchSubmit {
+	position: absolute;
+	visibility: hidden;
+	font-size: 1em;
+	outline: none;
+	border: none;
+	margin: 0;
+	border-left: 1px solid #000;
+	border-radius: 0 0.5em 0.5em 0;
+	padding: 0.4em 0.5em;
+	background-color: transparent;
+	cursor: pointer;
+	vertical-align: middle;
+	z-index: 100;
+	animation: PullSearch 250ms;
+}
+#searchSubmit:hover {background-color: rgba(0, 0, 0, 0.1);}
+/*On Dropping*/
+.drop #searchSubmit {
+	visibility: visible;
+	animation: DropSearch 250ms;}
+.drop .search {
+	visibility: visible;
+	opacity: 1;
+	z-index: 10;
+	animation: DropSearch 250ms;
+}
+@keyframes DropSearch {
+	from {margin-top: -200px; opacity: 0; z-index: -1; visibility: hidden;}
+	to {opacity: 1; z-index: 10; visibility: visible;}
+}
+@keyframes PullSearch {
+	from {opacity: 1; visibility: visible;}
+	to {opacity: 0; z-index: -1; visibility: hidden;}
+}
+
+
+
+/*Navigation For Mobile*/
+@media all and (max-width: 601px) {
+/*Header*/
+.top_logo {
+	display: block;
+	padding-left: 5%;
+	margin-top: 0.5%;
+}
+
+/*Left Part Content*/
+#topNavLogo {
+	width: 10em;
+	margin: 0;
+	padding: 0;
+}
+.logo_pic {
+	width: 100%;
+	margin-top: 0.3125em;
+	margin: 0;
+	padding: 0;
+}
+.site_title {
+	font-size: 6em;
+	margin: 0;
+	padding: 0 0.35em;
+}
+/*Onscroll Down*/
+.moving #topNavLogo {width: 7em;}
+.moving .site_title {font-size: 4em; padding-top: 0em; vertical-align: middle;}
+	
+/*Menu Button for Mobile*/
+	
+.main_menu_btn {
+	display: block;
+	position: absolute;
+	font-size: 0.99em;
+	background-color: rgba(0, 0, 0, 0.9);
+	right: 1em;
+	padding: 0 1em;
+	margin: 0;
+	border-radius: 0 0 0 1em;
+	transition: all 500ms !important;
+}
+.moving .main_menu_btn {border-radius: 0; background-color: transparent;}
+.main_menu_btn:hover li {background-color: transparent !important;}
+.main_menu_btn:hover {background-color: #000 !important;}
+	
+.show .main_menu_btn {
+	display: block;
+	position: relative;
+	background-color: #16A085;
+	right: 0;
+	padding: 0;
+	margin: 0;
+	border-radius: 0;
+	transition: all 500ms !important;
+}
+
+	.show .main_menu_btn:hover {background-color: #16A085 !important;}
+/*Navigation Bar*/
+.main_nav {
+	position: absolute;
+	right: 0;
+	text-align: center;
+	font-size: 1.5em;
+	height: 100vh;
+	margin-left: 10%;
+	margin-top: 0.0%;
+	/*background-color: rgba(0, 0, 0, 0.9);*/
+	background-color: transparent;
+}
+.show {background-color: rgba(0, 0, 0, 0.9) !important;}
+
+/*Main Links' Menu*/
+.parent_nav_menu {
+    display: block;
+	width: 100%;
+	padding: 0;
+	margin: 0 0 0 0;
+	list-style: none;
+}
+
+/*Main Links*/
+.nBtn {
+	display: none !important;
+}
+.show .nBtn {display: block !important}
+	
+.parent_nav_menu .top_nav_item, .srch_actvator {
+	display: block;
+	font-size: 1.35em;
+	font-family: inherit;
+	text-align: left;
+	text-transform: capitalize;
+	width: 100%;
+	padding: 1.25em 0 1.25em 5%;
+	border-radius: 0;
+	vertical-align: middle;
+}
+.show .top_nav_item, .show .srch_actvator {border-bottom: 1px solid #FFF;}
+.parent_nav_menu .top_nav_item:hover , .srch_actvator:hover {background-color: #16A085; transition: all 250ms;}
+
+/*Secondary Lists*/
+.parent_nav_menu .dropdown_list {
+	display: block;
+	font-size: 0;
+	height: 0;
+	width: 100%;
+	position: absolute;
+	margin: 1.25em 0 -1.25em -5%;
+	padding: 0;
+    z-index: -1;
+	border-radius: 0;
+	transition: all 0ms;
+}
+
+/*Dropping The List*/
+.parent_nav_menu .active .dropdown_list {
+	position: relative;
+	font-size: 1em;
+	height: auto;
+	border-radius: 0;
+	animation: none;
+	z-index: 1;
+	transition: all 250ms;
+}
+
+/*Secondary Lists Items*/
+.dropdown_list .service_item {
+	display: block;
+	text-align: center;
+	font-size: 0.85em;
+	vertical-align: middle;
+	padding: 1.25em 0;
+	background-color: #000;
+	border-radius: 0;
+	border-top: 0.0625em solid #FFF;
+}
+.dropdown_list .service_item:hover {
+	color: #000;
+	background-color: rgba(255, 255, 255, 1);
+	font-weight: 900;
+}
+.dropdown_list .service_link {
+	padding: 1em 0;
+}
+
+/*Search Input*/
+.search {
+	position: absolute;
+	visibility: hidden;
+	top: 37.5em !important;
+	width: 43vw !important;
+	
+}
+.search::selection {
+	color: #FFF;
+	background-color: #000;
+}
+
+/*Go Search Button*/
+#searchSubmit {
+	top: 37.5em !important;
+}
+#searchSubmit:hover {background-color: rgba(0, 0, 0, 0.1);}
+}
+
+
+
+/*END OF HEADER*/
+
+/*FOOTER*/
+.main_footer {
+	position: absolute;
+	display: flex;
+	background-color: #000;
+	max-width: 98.93vw !important;
+	padding: 0;
+	margin: 0;
+}
+.footer_main_portion {
+	display: inline-table;
+	flex-direction: row;
+}
+.footer_main_portion:nth-child(2), 
+.footer_main_portion:nth-child(3) {
+	margin: -0.2em !important;
+}
+/*Headings*/
+.footer_heading {
+	display: block;
+	text-align: left;
+	color: #FFF;
+	font-size: 1.75em;
+	font-family: "Abel";
+	text-transform: capitalize;
+	margin: 0.5em 0 0 0;
+	padding: 0 0 0.25em 0.75em;
+	text-decoration-style: dotted;
+	border-bottom: 1px solid #FFF;
+}
+/*Footer Content*/
+
+/*Two Layer Part*/
+.two_layer {
+	margin: 0;
+}
+/*Contact Us*/
+#contactUs {
+	display: block;
+	font-size: 1em;
+	text-align: center;
+	margin: 0;
+}
+.contact_us_item {
+	display: block;
+}
+#contactUsList {padding: 0.75em 0 0.25em 0;}
+
+/*Contact Details*/
+h4.contact_us_item, .contact_us_item a {
+	font-size: 1.05em;
+	font-family: "Rajdhani";
+	font-weight: 100;
+	color: #EEE;
+	text-decoration: none;
+	margin: 0.5em 0;
+}
+.contact_us_item a {display: inline-block;}
+.contact_us_item a:hover {color: #16A085;}
+h4.contact_us_item i {color: #BBB;}
+
+/*Social Media*/
+#socialMedia {
+	display: block;
+	font-size: 1em;
+	text-align: center;
+	margin: 1em 0;
+}
+#socialMedia h3 {
+	border-top: 1px solid #333;
+	padding-top: 0.75em;
+}
+#socialMediaList {
+	margin: 2em 0;
+}
+.social_item {
+	display: block;
+}
+
+/*Social Links Styleing*/
+.social_link {
+	display: inline-block;
+	text-align-last: center;
+	vertical-align: middle;
+	font-size: 1.45em;
+	color: #FFF;
+	line-height: 2.05em;
+	width: 2em;
+	height: 2em;
+	margin-left: 0.75em;
+	border-radius: 50%;
+	transition: all 250ms;
+}
+.social_link:hover {background-color: #FFF !important; box-shadow: 0px 0px 0.25em 0.25em; transition: all 250ms;}
+
+/*Social Links Colours*/
+#socialMediaList #google_page {background-color: #dd4b39;}
+#socialMediaList #youtube_page {background-color: #bb0000;}
+#socialMediaList #fb_page {background-color: #3b5998;}
+#socialMediaList #twitter_page {background-color: #00aced;}
+#socialMediaList #tumblr_page {background-color: #32506d;}
+#socialMediaList #linkedin_page {background-color: #007bb6;}
+#socialMediaList #pin_page {background-color: #cb2027;}
+#socialMediaList #flickr_page {background-color: #ff0084;}
+#socialMediaList #google_page:hover {color: #dd4b39;}
+#socialMediaList #youtube_page:hover {color: #bb0000;}
+#socialMediaList #fb_page:hover {color: #3b5998;}
+#socialMediaList #twitter_page:hover {color: #00aced;}
+#socialMediaList #tumblr_page:hover {color: #32506d;}
+#socialMediaList #linkedin_page:hover {color: #007bb6;}
+#socialMediaList #pin_page:hover {color: #cb2027;}
+#socialMediaList #flickr_page:hover {color: #ff0084;}
+
+/*Site Map*/
+#siteMap {
+	font-size: 1em;
+	margin: 0;
+	padding: 0.9em 0 0.25em 0;
+}
+.siteMap_item {
+	display: block;
+	margin: 0;
+}
+
+/*Site Map Links List*/
+#siteMapLinks {
+	font-size: 1em;
+	margin: 1em 1em 0em 2em;
+	padding-bottom: 1em;
+}
+.footer_link {
+	display: block;
+	font-size: 1em;
+	font-family: "Rajdhani";
+	text-transform: capitalize;
+	text-decoration: none;
+	color: #EEE;
+	border-radius: 0.5em;
+	letter-spacing: 0.25px;
+	cursor: pointer;
+}
+/*Primary Links*/
+#manasikSpill, #serviceSpill {display: block;}
+#manasikSpill .secondary_footer_list, #serviceSpill .secondary_footer_list {display: inline-block;}
+.prim_link, .noprim_link {
+	font-size: 1em;
+	text-align: left;
+	margin: 0.6em 0;
+	padding: 0.5em 1em;
+	background-color: #111;
+	text-shadow: 0 0 1px #EEE;
+	z-index: 10;
+	transition: all 150ms;
+}
+.prim_link:hover, .noprim_link:hover, .active .noprim_link {
+	color: #333;
+	background-color: #EEE;
+	font-weight: bolder;
+	text-shadow: 0 0 1px #333;
+	transition: all 150ms;
+}
+/*Secondary Lists*/
+.secondary_footer_list {
+	position: absolute;
+	opacity: 0;
+	z-index: -100;
+	text-align: center;
+	margin-left: 0;
+}
+/*On Click*/
+.active .secondary_footer_list {
+	position: relative;
+	opacity: 1;
+	z-index: 1;
+}
+/*Secondary Links*/
+.secondary_sm_link {
+	display: inline-table;
+	font-size: 0.9em;
+	color: #111;
+	background-color: #EEE;
+	text-shadow: 0 0 1px #333;
+	padding: 0.25em 0.5em;
+	margin: 0 0.25em;
+	border: 1px solid transparent;
+	transition: all 150ms;
+}
+.secondary_sm_link:hover {
+	color: #FFF;
+	background-color: #000;
+	text-shadow: 0 0 1px #FFF;
+	border: 1px solid #FFF;
+	transition: all 150ms;
+}
+
+/*Admin Login*/
+#adminLogin {
+	font-size: 1em;
+	margin: 0;
+	padding: 0;
+}
+#adminLogin h3 {
+	margin-right: -0.25em !important;
+}
+#loginForm {
+	display: block;
+	font-size: 1em;
+	padding: 1.5em;
+	margin: 1em;
+	border-radius: 0.5em;
+	border: 1px solid #EEE;
+}
+input.login_item {
+	display: block;
+	width: 100%;
+	border: 0;
+	outline: 0;
+	font-size: 0.9em;
+	font-family: "Rajdhani";
+	font-weight: 900;
+	letter-spacing: 0.5px;
+	color: #000;
+	background-color: #EEE;
+	padding: 0.5em;
+	margin-left: -0.5em;
+	border-radius: 0.3em;
+}
+input.login_item::placeholder {
+	color: #555;
+	/*text-align: center;*/
+	font-size: 1em;
+	font-family: "Rajdhani";
+	font-weight: 900;
+	letter-spacing: 0.5px;
+}
+.login_button {
+	display: block;
+	font-size: 1em;
+	font-family: "Rajdhani";
+	font-weight: 900;
+	letter-spacing: 0.5px;
+	color: #EEE;
+	background-color: #16A085;
+	width: 70%;
+	padding: 0.5em;
+	margin: 0 15%;
+	border: 1px solid transparent;
+	outline: 0;
+	border-radius: 0.5em;
+	cursor: pointer;
+	transition: all 250ms;
+}
+.login_button:hover {
+	background-color: transparent;
+	border: 1px solid #FFF;
+	transition: all 250ms;
+}
+/*END OF FOOTER*/
+
+/*Viewport*/
+@media all and (max-width: 1080px) {
+	body {font-size: 1.1vw;}
+}
+@media all and (max-width: 601px) {
+	.main_header {font-size: 1.25em;}
+	.main_footer {font-size: 1.85em;}
+	input.login_item, .login_button {
+		margin: 1.5em 15%;
+		width: 70%;
+	}
+}

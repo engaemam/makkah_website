@@ -1,0 +1,110 @@
+@charset "UTF-8";
+/*Services*/
+/*First Panel*/
+#firstPanel {
+	height: 100vh;
+	background-position: 100% 100%;
+	background-attachment: fixed;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+.welcome_msg {
+	position: absolute;
+	color: #FFF;
+	font-size: 4em;
+	font-family: "Poiret One", "cursive";
+	font-weight: 100;
+	padding: 0.1em 2em;
+	margin: 0.5em;
+	border-radius: 1em;
+	background-color: rgba(0, 0, 0, 0.9);
+	cursor: default;
+	transition: all 500ms;
+}
+.welcome_msg::selection {background-color: transparent;}
+.welcome_msg.dimmed {
+	opacity: 0.1;
+}
+#secondPanel {
+	min-height: 100vh;
+	display: flex;
+	background-color: #FAFAFA;
+}
+#map {
+	width: 100%;
+	height: 100vh;
+}
+#thirdPanel {
+	min-height: 100vh;
+	background-color: #FAFAFA;
+	margin-bottom: 5vh;
+}
+		
+.service_card {
+	position: relative;
+	display: inline-block;
+	background-color: #FFF;
+	width: 25%;
+	height: 30em;
+	margin: 3.125% 0 0 6.25%;
+	border-radius: 1em;
+	transition: all 250ms;
+}
+.service_card:hover {
+	box-shadow: 0 0 0.5em 0.35em #AAA;
+}
+.service_card:hover .header_pic {opacity: 1;}
+.service_card .header_pic {
+	position: absolute;
+	display: block;
+	height: 25%;
+	width: 100%;
+	background-attachment: local;
+	background-position: 100% 100%;
+	background-size: cover;
+	border-radius: 1em 1em 0 0;
+	opacity: 0.65;
+	transition: all 250ms;
+}
+.service_card .header_pic h3 {
+	color: #FFF;
+	font-size: 2em;
+	font-family: "Rajdhani";
+	text-align: center;
+	text-transform: uppercase;
+	letter-spacing: 0.1em;
+	padding-top: 0.3em;
+	cursor: default;
+}
+.service_card .header_pic h3::selection {background-color: transparent;}
+.service_card .info {
+	position: absolute;
+	display: block;
+	top: 25%;
+	height: 75%;
+	width: 100%;
+	color: #000;
+	font-size: 1em;
+	font-family: "Abel";
+	text-transform: capitalize;
+	line-height: 2em;
+	border-radius: 0 0 1em 1em;
+	background-color: rgba(230,230,230,0.5);
+	transition: all 250ms;
+}
+.service_card:hover .info {
+	color: #FFF;
+	background-color: #16A085;
+}
+.service_card .info ul {
+	padding: 0 0 0 2.75em;
+	list-style: circle;
+}
+
+@media all and (max-width: 601px) {
+	.service_card {
+	width: 40%;
+	height: 30em;
+	margin: 3.125% 0 0 6.666%}
+}

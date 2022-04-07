@@ -1,0 +1,274 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Marketplaces | Makkah</title>
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="services.css">
+<link rel="stylesheet" href="files\fontawesome-free-5.0.8\fontawesome-free-5.0.8\web-fonts-with-css\css\fontawesome-all.min.css">
+<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
+<link rel="icon" href="files/logo.png">
+<style>
+	#firstPanel {background-image: url("files/marketplaces.JPG");}
+	.service_card .header_pic {background-image: url("files/marketplaces_cards.JPG");}
+</style>
+</head>
+<body id="marketplacesPage">
+	<div id="generalPanel" class="cl-12 cl-t-12 cl-m general_panel">
+	<header id="topHeader" class="cl-12 cl-t-12 cl-m main_header">
+		<div id="topLogo" class="cl-4 cl-t-4 cl-hm top_logo">
+			<a class="site_link" href="index.html"><i id="topNavLogo" class="logo_pic"><img class="logo_pic" src="files/logo.png" alt="Makkah"></i>
+			<h1 id="siteName" class="site_title">Makkah</h1></a>
+		</div>
+		<nav id="topNav" class="cl-6 cl-t-8 cl-hm main_nav">
+			<ul id="parentNavMenu" class="parent_nav_menu">
+			<a id="menuBtn" class="top_nav_link main_menu_btn mobile-only"><li class="top_nav_item">Menu</li></a>
+			<a href="index.html" class="top_nav_link"><li class="top_nav_item">home</li></a>
+			<a class="top_nav_link"><li class="top_nav_item" onClick="activate(this)">servieces<br>
+			<ul id="serviceDrop" class="dropdown_list">
+				<a id="hotels" class="service_link" href="hotels.html"><li class="service_item">hotels</li></a>
+				<a id="hospitals" class="service_link" href="hosbitals.html"><li class="service_item">hospitals</li></a>
+				<a id="embassies" class="service_link" href="embassies.html"><li class="service_item">embassies</li></a>
+				<a id="resturants" class="service_link" href="resturants.html"><li class="service_item">resturants</li></a>
+				<a id="marketPlaces" class="service_link" href="marketplaces.html"><li class="service_item">marketplaces</li></a>
+				<a id="emergencies" class="service_link" href="emergencies.html"><li class="service_item">emergencies</li></a>
+				<a id="transportation" class="service_link" href="transportation.html"><li class="service_item">transportation</li></a>
+			</ul></li></a>
+			<a class="top_nav_link"><li class="top_nav_item" onClick="activate(this)">manasik
+			<ul id="manaskDrop" class="dropdown_list">
+				<a id="hejj" class="service_link" href="hejj.html"><li class="service_item">hejj</li></a>
+				<a id="umera" class="service_link" href="umera.html"><li class="service_item">umera</li></a>
+				<a id="manaskDates" class="service_link" href="calender.html"><li class="service_item">calendar</li></a>
+			</ul></li></a>
+			<a href="https://quran.com" target="_blank" class="top_nav_link"><li class="top_nav_item">quraan</li></a>
+			<a href="https://sunnah.com" target="_blank" class="top_nav_link"><li class="top_nav_item">sunnah</li></a>
+			<li class="srch_actvator" onClick="activate(this)"><i class="fa fa-search" aria-hidden="true" style="font-size: 0.9em;"></i> Search</li>
+			<div id="searchBar" class="search_bar search_component"><input id="searchInput" class="search search_component" type="text" name="search" maxlength="100"><button type="submit" id="searchSubmit" class="search_component"><i class="fa fa-search search_component" aria-hidden="true"></i></button></div>
+			</ul>			
+		</nav>
+	</header>
+		<container id="homeCont" class="main_container">
+		<div id="firstPanel" class="panel main_panel">
+		</div>
+		<div id="secondPanel" class="panel main_panel">
+			<iframe id="map" src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d237729.0747006229!2d39.78110906639466!3d21.408922815297984!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1smarket!5e0!3m2!1sen!2seg!4v1521415378207" width="400" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>
+			<h1 class="welcome_msg">Marketplaces in Makkah</h1>
+		</div>
+		<div id="thirdPanel" class="panel main_panel">
+			<div class="marketplaces_card service_card card">
+				<div class="header_pic">
+					<h3>marketplace</h3>
+				</div>
+				<div class="info">
+					<ul>
+						<li>Rate: <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="far fa-star"></i></li>
+						<li>reviews: <num class="review_num">626548</num></li>
+						<li>adress: 3rd makkah street, makkah, ksa</li>
+						<li>phone number: +970750750750</li>
+						<li>services: food delivary</li>
+						<li>description:<br>
+							a four-stars marketplace. offers all types of food. all nations food is availabe.</li>
+					</ul>
+				</div>
+			</div>
+			<div class="marketplaces_card service_card card">
+				<div class="header_pic">
+					<h3>marketplace</h3>
+				</div>
+				<div class="info">
+					<ul>
+						<li>Rate: <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="far fa-star"></i></li>
+						<li>reviews: <num class="review_num">626548</num></li>
+						<li>adress: 3rd makkah street, makkah, ksa</li>
+						<li>phone number: +970750750750</li>
+						<li>services: food delivary</li>
+						<li>description:<br>
+							a four-stars marketplace. offers all types of food. all nations food is availabe.</li>
+					</ul>
+				</div>
+			</div>
+			<div class="marketplaces_card service_card card">
+				<div class="header_pic">
+					<h3>marketplace</h3>
+				</div>
+				<div class="info">
+					<ul>
+						<li>Rate: <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="far fa-star"></i></li>
+						<li>reviews: <num class="review_num">626548</num></li>
+						<li>adress: 3rd makkah street, makkah, ksa</li>
+						<li>phone number: +970750750750</li>
+						<li>services: food delivary</li>
+						<li>description:<br>
+							a four-stars marketplace. offers all types of food. all nations food is availabe.</li>
+					</ul>
+				</div>
+			</div>
+			<div class="marketplaces_card service_card card">
+				<div class="header_pic">
+					<h3>marketplace</h3>
+				</div>
+				<div class="info">
+					<ul>
+						<li>Rate: <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="far fa-star"></i></li>
+						<li>reviews: <num class="review_num">626548</num></li>
+						<li>adress: 3rd makkah street, makkah, ksa</li>
+						<li>phone number: +970750750750</li>
+						<li>services: food delivary</li>
+						<li>description:<br>
+							a four-stars marketplace. offers all types of food. all nations food is availabe.</li>
+					</ul>
+				</div>
+			</div>
+			<div class="marketplaces_card service_card card">
+				<div class="header_pic">
+					<h3>marketplace</h3>
+				</div>
+				<div class="info">
+					<ul>
+						<li>Rate: <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="far fa-star"></i></li>
+						<li>reviews: <num class="review_num">626548</num></li>
+						<li>adress: 3rd makkah street, makkah, ksa</li>
+						<li>phone number: +970750750750</li>
+						<li>services: food delivary</li>
+						<li>description:<br>
+							a four-stars marketplace. offers all types of food. all nations food is availabe.</li>
+					</ul>
+				</div>
+			</div>
+			<div class="marketplaces_card service_card card">
+				<div class="header_pic">
+					<h3>marketplace</h3>
+				</div>
+				<div class="info">
+					<ul>
+						<li>Rate: <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="far fa-star"></i></li>
+						<li>reviews: <num class="review_num">626548</num></li>
+						<li>adress: 3rd makkah street, makkah, ksa</li>
+						<li>phone number: +970750750750</li>
+						<li>services: food delivary</li>
+						<li>description:<br>
+							a four-stars marketplace. offers all types of food. all nations food is availabe.</li>
+					</ul>
+				</div>
+			</div>
+			<div class="marketplaces_card service_card card">
+				<div class="header_pic">
+					<h3>marketplace</h3>
+				</div>
+				<div class="info">
+					<ul>
+						<li>Rate: <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="far fa-star"></i></li>
+						<li>reviews: <num class="review_num">626548</num></li>
+						<li>adress: 3rd makkah street, makkah, ksa</li>
+						<li>phone number: +970750750750</li>
+						<li>services: food delivary</li>
+						<li>description:<br>
+							a four-stars marketplace. offers all types of food. all nations food is availabe.</li>
+					</ul>
+				</div>
+			</div>
+			<div class="marketplaces_card service_card card">
+				<div class="header_pic">
+					<h3>marketplace</h3>
+				</div>
+				<div class="info">
+					<ul>
+						<li>Rate: <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="far fa-star"></i></li>
+						<li>reviews: <num class="review_num">626548</num></li>
+						<li>adress: 3rd makkah street, makkah, ksa</li>
+						<li>phone number: +970750750750</li>
+						<li>services: food delivary</li>
+						<li>description:<br>
+							a four-stars marketplace. offers all types of food. all nations food is availabe.</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+			
+		</container>
+	<footer id="bottomFooter" class="cl-12 cl-t-12 cl-nom main_footer">
+			<div class="footer_main_portion cl-12 cl-t-12 cl-m">
+				
+				<div class="footer_item footer_main_portion two_layer cl-4 cl-t-4 cl-m">
+					<div id="contactUs" class="two_layer_item cl-m">
+						<h3 class="footer_heading contact_us_item">contact us</h3>
+						<div id="contactUsList" class="contact_us_item">
+							<h4 class="contact_us_item"><i class="fa fa-phone" aria-hidden="true" style="transform: rotateZ(90deg)"></i>&nbsp;&nbsp;Phone: <a href="tel:+9766666666">+9766666666</a></h4>
+							<h4 class="contact_us_item"><i class="fa fa-fax" aria-hidden="true"></i>&nbsp;&nbsp;Fax: <a href="fax:+9766666666">+9766666666</a></h4>
+							<h4 class="contact_us_item"><i class="fa fa-envelope" aria-hidden="true"></i>&nbsp;&nbsp;E-Mail: <a 	href="mailto:makkah@makkah.com">makkah@makkah.com</a></h4>
+						</div>
+					</div>
+				
+					<div id="socialMedia" class="two_layer_item cl-m">
+						<h3 class="footer_heading social_item">keep on touch</h3>
+							<div id="socialMediaList" class="social_item">
+								<a class="social_link" target="_blank" href="https://plus.google.com/" id="google_page"><i class="fab fa-google-plus-g"></i></a>
+								<a class="social_link" target="_blank" href="https://youtube.com/" id="youtube_page"><i class="fab fa-youtube"></i></a>
+								<a class="social_link" target="_blank" href="https://facebook.com/" id="fb_page" ><i class="fab fa-facebook-f"></i></a>
+								<a class="social_link" target="_blank" href="https://twitter.com/" id="twitter_page"><i class="fab fa-twitter"></i></a>
+								<a class="social_link" target="_blank" href="https://tumblr.com/" id="tumblr_page"><i class="fab fa-tumblr"></i></a>
+								<a class="social_link" target="_blank" href="https://linkedin.com/" id="linkedin_page"><i class="fab fa-linkedin-in"></i></a>
+								<a class="social_link" target="_blank" href="https://pinterest.com/" id="pin_page"><i class="fab fa-pinterest-p"></i></a>
+							</div>
+					</div>
+				</div>
+				
+				<div id="siteMap" class="footer_item footer_main_portion cl-6 cl-t-6 cl-m">
+						<h3 class="footer_heading siteMap_item">site map</h3>
+						<div id="siteMapLinks" class="siteMap_item">
+							<a href="index.html" class="footer_link prim_link">home</a>
+							<span id="serviceSpill">
+								<a class="footer_link noprim_link">servieces</a>
+							<div class="secondary_footer_list">
+								<a class="secondary_sm_link footer_link" href="hotels.html">hotels</a>
+								<a class="secondary_sm_link footer_link" href="hosbitals.html">hospitals</a>
+								<a class="secondary_sm_link footer_link" href="embassies.html">embassies</a>
+								<a class="secondary_sm_link footer_link" href="resturants.html">resturants</a>
+								<a class="secondary_sm_link footer_link" href="marketplaces.html">marketplaces</a>
+								<a class="secondary_sm_link footer_link" href="emergencies.html">emergencies</a>
+								<a class="secondary_sm_link footer_link" href="transportation.html">transportation</a>
+							</div>
+							</span>
+							<span id="manasikSpill">
+							<a class="footer_link noprim_link">manasik</a>
+							<div class="secondary_footer_list">
+								<a class="secondary_sm_link footer_link" href="hejj.html">hejj</a>
+								<a class="secondary_sm_link footer_link" href="umera.html">umera</a>
+								<a class="secondary_sm_link footer_link" href="calender.html">calendar</a>
+							</div>
+							</span>
+							<a href="https://quran.com" target="_blank" class="footer_link prim_link">quraan</a>
+							<a href="https://sunnah.com" target="_blank" class="footer_link prim_link">sunnah</a>
+						</div>
+				</div>
+
+				<div id="adminLogin" class="footer_item footer_main_portion cl-2 cl-t-2 cl-m">
+					<h3 class="footer_heading adminLog_item">Admin Login</h3>
+					<br>
+					<form id="loginForm" method="get">
+  						<input type="email" placeholder="E-Mail" id="emailInput" class="login_input login_item" maxlength="30"><br>
+						<input type="password" placeholder="Password" id="passwordInput" class="login_input login_item" maxlength="30"><br>
+						<button type="submit" class="login_button login_item">Login</button>
+					</form>
+				</div>
+				
+			</div>
+		</footer>
+	</div>
+	<script src="script.js"></script>
+	<script src="prayerTimesAPI.js"></script>
+	<script src="hijriDate.js"></script>
+	<script>
+		//Adjustment of Styling
+		//Welcoming Message
+		$(".welcome_msg").css({left: (($(window).width() - $(".welcome_msg").outerWidth()) / 2.1)})
+		//Opacity on Map
+		$(window).scroll(function() {
+			if ($(window).scrollTop() > (NavBarHeight * 7.5)) {$(".welcome_msg").addClass("dimmed")}
+			else {$(".welcome_msg").removeClass("dimmed")}})
+		//Second Panel Top Spacing
+		$(".panel_side").css({marginTop: NavBarHeight, marginBottom: NavBarHeight})
+	</script>
+</body>
+</html>
